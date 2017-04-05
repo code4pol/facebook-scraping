@@ -1,0 +1,875 @@
+<HTML>
+	<head>
+	<style>
+<!--
+.DataHeader
+	{padding:0px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:8.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:"dd/mm";
+	text-align:center;
+	vertical-align:bottom;
+	border-top:.5pt solid #808080;
+	border-right:none;
+	border-bottom:.5pt solid #808080;
+	border-left:.5pt solid #808080;
+	background:silver;
+	mso-pattern:black none;
+	white-space:nowrap;}
+  
+.DataLinhaImpar
+	{padding:0px;
+	mso-ignore:padding;
+	color:black;
+	font-size:8.0pt;
+	font-weight:190;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:"dd/mm";
+	text-align:center;
+	vertical-align:bottom;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid silver;
+	border-left:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+  
+ .DataLinhaPar
+	{padding:0px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:8.0pt;
+	font-weight:190;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:"dd/mm";
+	text-align:center;
+	vertical-align:bottom;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid silver;
+	border-left:none;
+	background:#E3E3E3;
+	mso-pattern:black none;
+	white-space:nowrap;}
+
+.HistoricoHeader
+	{padding:0px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:8.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:Standard;
+	text-align:general;
+	vertical-align:bottom;
+	border-top:.5pt solid #808080;
+	border-right:none;
+	border-bottom:.5pt solid #808080;
+	border-left:none;
+	background:silver;
+	mso-pattern:black none;
+	white-space:nowrap;}
+  
+.HistoricoLinhaImpar
+	{padding:0px;
+	mso-ignore:padding;
+	color:black;
+	font-size:8.0pt;
+	font-weight:190;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:Standard;
+	text-align:general;
+	vertical-align:bottom;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid silver;
+	border-left:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+
+.HistoricoLinhaPar
+	{padding:0px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:8.0pt;
+	font-weight:190;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:Standard;
+	text-align:general;
+	vertical-align:bottom;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid silver;
+	border-left:none;
+	background:#E3E3E3;
+	mso-pattern:black none;
+	white-space:nowrap;}
+
+.ValorHeader
+	{padding:0px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:8.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:Standard;
+	text-align:right;
+	vertical-align:bottom;
+	border-top:.5pt solid #808080;
+	border-right:none;
+	border-bottom:.5pt solid #808080;
+	border-left:none;
+	background:silver;
+	mso-pattern:black none;
+	white-space:nowrap;}
+  
+.ValorLinhaImpar
+	{padding:0px;
+	mso-ignore:padding;
+	color:black;
+	font-size:8.0pt;
+	font-weight:190;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+  mso-number-format:"\#\,\#\#0\.00\;\[Red\]\0022-\0022\\ \#\,\#\#0\.00";  
+	text-align:right;
+	vertical-align:bottom;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid silver;
+	border-left:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+  
+.ValorLinhaPar
+	{padding:0px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:8.0pt;
+	font-weight:190;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:"\#\,\#\#0\.00\;\[Red\]\0022-\0022\\ \#\,\#\#0\.00";
+	text-align:right;
+	vertical-align:bottom;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid silver;
+	border-left:none;
+	background:#E3E3E3;
+	mso-pattern:black none;
+	white-space:nowrap;}
+
+.ValorLinhaImparNeg
+	{padding:0px;
+	mso-ignore:padding;
+	color:red;
+	font-size:8.0pt;
+	font-weight:190;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+        mso-number-format:"\#\,\#\#0\.00\;\[Red\]\0022-\0022\\ \#\,\#\#0\.00";  
+	text-align:right;
+	vertical-align:bottom;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid silver;
+	border-left:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+  
+.ValorLinhaParNeg
+	{padding:0px;
+	mso-ignore:padding;
+	color:red;
+	font-size:8.0pt;
+	font-weight:190;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:"\#\,\#\#0\.00\;\[Red\]\0022-\0022\\ \#\,\#\#0\.00";
+	text-align:right;
+	vertical-align:bottom;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid silver;
+	border-left:none;
+	background:#E3E3E3;
+	mso-pattern:black none;
+	white-space:nowrap;}
+
+.SaldoHeader
+	{padding:0px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:8.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:Standard;
+	text-align:right;
+	vertical-align:bottom;
+  border-top:.5pt solid #808080;
+	border-right:.5pt solid #808080;
+	border-bottom:.5pt solid #808080;
+	border-left:none;
+	background:silver;
+	mso-pattern:black none;
+	white-space:nowrap;}
+  
+.Titulo
+	{padding:0px;
+	mso-ignore:padding;
+	color:black;
+	font-size:8.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Verdana, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+
+.Dados
+	{padding:0px;
+	mso-ignore:padding;
+	color:black;
+	font-size:8.0pt;
+	font-weight:190;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:Standard;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+-->
+</style>
+	</head>
+	<body>
+<table width="100%" border="0" cellpadding="1" cellspacing="2">
+    <tr>
+       	<td colspan=4><img src="https://itaubankline.itau.com.br/V1/PERS/IMG/HeaderExtratoExcel.jpg"></td>
+    </tr>
+    <tr>
+       	<td colspan=4>&nbsp;</td>
+    </tr>
+    <tr>
+       	<td colspan=4>&nbsp;</td>
+    </tr>
+    <tr>
+       	<td colspan=4>&nbsp;</td>
+    </tr>	
+    <tr>
+	<td colspan=4>&nbsp;<b>Nome:</b>&nbsp;ALEXANDRE RODRIGUES GOMES     </td>
+	<td colspan=4>&nbsp;<b>Agência/Conta:</b>&nbsp;9367/00004 - 0</td>
+    </tr>
+    <tr>
+	<td colspan=4>&nbsp;<b>Data:</b>&nbsp;Fevereiro/2016</td>
+	<td colspan=4>&nbsp;<b>Horário:</b>&nbsp;11:47:20</td>
+    </tr>
+	<tr>
+       	<td colspan=4>&nbsp;</td>
+    </tr>
+    <tr>
+       	<td colspan=4><b>Extrato de conta corrente</b></td>
+    </tr>
+    <tr>
+       	<td colspan=4>&nbsp;</td>
+    </tr>
+</table>
+<table width="100%" border="0" cellpadding="1" cellspacing="2">
+    <tr height='17' style='height:12.75pt'>
+        <td height='17' style='height:12.75pt'></td>
+        <td class='DataHeader'>Data</td>
+        <td class='HistoricoHeader'></td>
+        <td class='HistoricoHeader'>Lançamento</td>
+        <td class='HistoricoHeader'></td>
+        <td class='ValorHeader'>Valor (R$)</td>
+	<td class='ValorHeader'></td>
+        <td class='SaldoHeader'>Saldo (R$)</td>
+    </tr>
+       <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">01/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO INICIAL</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">01/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10.655,65</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">02/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">10.655,65</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">03/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">RSHOP-BRASILEIRIN-03/02</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaParNeg" align="right">-4,00</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">03/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">INT TED   429138 DEFER</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImparNeg" align="right">-80,00</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">03/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">RES APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">84,00</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">03/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">10.571,65</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">04/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10.571,65</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">05/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">CXE     000240 SAQUE</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImparNeg" align="right">-100,00</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">05/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">RES APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">99,99</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">05/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">REND PAGO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">0,01</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">05/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10.471,66</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">10/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">DOCD INT009567  Jales</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImparNeg" align="right">-3.500,00</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">10/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">INT TED D   007764</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaParNeg" align="right">-1.500,00</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">10/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">INT PAG TIT BANCO 033</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImparNeg" align="right">-1.384,42</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">10/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">INT PAG TIT BANCO 070</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaParNeg" align="right">-716,67</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">10/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">RES APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">7.100,49</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">10/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">REND PAGO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">0,60</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">10/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">3.371,17</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">11/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">3.371,17</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">12/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">3.371,17</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">15/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">DA  SUPERGASBRAS 0214494</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaParNeg" align="right">-30,86</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">15/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">RES APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">30,86</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">15/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">3.340,31</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">16/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">CXE     000554 SAQUE</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImparNeg" align="right">-100,00</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">16/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">RES APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">99,99</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">16/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">REND PAGO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">0,01</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">16/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">3.240,32</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">17/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">CARTAO PERSONNALITE</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImparNeg" align="right">-426,01</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">17/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">CARTAO PERSONNALITE</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaParNeg" align="right">-2.851,32</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">17/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">TED 033.3328SEA TECN LTD</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">14.300,00</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">17/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">APL APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaParNeg" align="right">-10.882,67</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">150,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">17/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">14.122,99</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">18/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">14.122,99</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">19/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">INT TED   409186 Capital</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImparNeg" align="right">-4.160,00</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">19/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">RES APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">4.017,23</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">19/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">REND PAGO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">2,77</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">19/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10.105,76</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">22/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">DA  NET SERVICOS 2245361</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImparNeg" align="right">-163,97</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">22/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">DA  VIVO-DF 02677964389</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaParNeg" align="right">-194,74</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">22/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">RES APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">358,70</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">22/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">REND PAGO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">0,01</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">22/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">9.747,06</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">23/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">CH COMPENSADO 001 000038</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaParNeg" align="right">-260,00</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">23/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">RES APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">259,99</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">23/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">REND PAGO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">0,01</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">23/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">9.487,07</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">24/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">9.487,07</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">25/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">9.487,07</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">26/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">9.487,07</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">29/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">DA  CAESB 6838741</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImparNeg" align="right">-53,00</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">29/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">DA  CEB 014043513</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaParNeg" align="right">-118,23</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">29/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">RES APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">171,22</td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">29/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">REND PAGO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">0,01</td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">29/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO PARCIAL</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">29/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO ANTERIOR</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10,00</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaImpar">29/02</td>
+        <td width="40" class="DataLinhaImpar"></td>
+        <td width="246" class="HistoricoLinhaImpar" align="left">SALDO APLIC AUT MAIS</td>
+        <td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right"></td>
+	<td width="10" class="DataLinhaImpar"></td>
+        <td width="120" class="ValorLinhaImpar" align="right">9.315,85</td>
+    </tr>   <tr>
+        <td width="12" class=""></td>
+        <td width="40" class="DataLinhaPar">29/02</td>
+        <td width="40" class="DataLinhaPar"></td>
+        <td width="246" class="HistoricoLinhaPar" align="left">SALDO FINAL</td>
+        <td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right"></td>
+	<td width="10" class="DataLinhaPar"></td>
+        <td width="120" class="ValorLinhaPar" align="right">10,00</td>
+    </tr>
+</table>
+<!--mensagem-->
+</body>
+</html>
