@@ -10,10 +10,19 @@ class FacebookLoginPage:
         self._driver = webdriver.Chrome('/Users/alegomes/code/facebook-scraping/drivers/chromedriver')
         # self._driver = webdriver.Firefox()
         self._driver.get(self._login_url)
+        assert "Facebook - Log In or Sign Up" in self._driver.title
+        email_field = self._driver.find_element_by_id('email')
+        pass_field = self._driver.find_element_by_id('pass')
+
+    def __del__(self):
+        self._driver.quit()
 
     def get_title(self):
         # return "Facebook - Login or Sign Up"
         return self._driver.title
+
+    def get_login_field(self):
+        return None
 
 class FacebookFanPage:
 
