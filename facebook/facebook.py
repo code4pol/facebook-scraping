@@ -11,15 +11,18 @@ class FacebookLoginPage:
         # self._driver = webdriver.Firefox()
         self._driver.get(self._login_url)
         assert "Facebook - Log In or Sign Up" in self._driver.title
-        email_field = self._driver.find_element_by_id('email')
-        pass_field = self._driver.find_element_by_id('pass')
+        self._email_field = self._driver.find_element_by_id('email')
+        self._pass_field = self._driver.find_element_by_id('pass')
+        self._login_button = self._driver.find_element_by_id('u_0_p')
 
     def __del__(self):
         self._driver.quit()
 
-    def get_title(self):
-        # return "Facebook - Login or Sign Up"
-        return self._driver.title
+    def login(self,user,password):
+        self._email_field.send_keys(user)
+        self._pass_field.send_keys(password)
+        # self._login_button.click()
+        self._pass_field.submit()
 
     def get_login_field(self):
         return None
