@@ -1,9 +1,12 @@
 
 class FacebookLoginPage:
 
+
     def __init__(self):
         pass
 
+    def get_title(self):
+        return "Facebook - Login or Sign Up"
 
 class FacebookFanPage:
 

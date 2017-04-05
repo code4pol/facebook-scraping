@@ -4,11 +4,10 @@ import unittest
 
 
 class TestFacebookLoginPage(unittest.TestCase):
-    # .login('alegomes@gmail.com','!2#Pipoc@')
 
     def test_page_opening (self):
         login_page = FacebookLoginPage()
-        self.assertRaises(FileNotFoundError, FacebookLoginPage)
+        self.assertEquals("Facebook - Login or Sign Up", login_page.get_title())
 
 if __name__ == '__main__':
     unittest.main()
