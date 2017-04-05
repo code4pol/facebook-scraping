@@ -1,12 +1,19 @@
+from selenium import webdriver
+# from selenium.webdriver.common.keys import Keys
 
 class FacebookLoginPage:
 
+    _login_url = "https://www.facebook.com/"
+    _page_url = "https://www.facebook.com/jdoriajr/"
 
     def __init__(self):
-        pass
+        self._driver = webdriver.Chrome('/Users/alegomes/code/facebook-scraping/drivers/chromedriver')
+        # self._driver = webdriver.Firefox()
+        self._driver.get(self._login_url)
 
     def get_title(self):
-        return "Facebook - Login or Sign Up"
+        # return "Facebook - Login or Sign Up"
+        return self._driver.title
 
 class FacebookFanPage:
 
