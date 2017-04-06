@@ -1,4 +1,9 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+
 # from selenium.webdriver.common.keys import Keys
 
 # class Facebook:
@@ -69,6 +74,8 @@ class Facebook:
     def __init__(self, username, password):
         print('Facebook.__init__')
         self._driver = webdriver.Chrome('/Users/alegomes/code/facebook-scraping/drivers/chromedriver')
+        self._driver.wait = WebDriverWait(self._driver, 5)
+
         # self._driver = webdriver.Firefox(executable_path='/Users/alegomes/code/facebook-scraping/drivers/geckodriver')
         self._driver.get(self._login_url)
         assert "Facebook - Log In or Sign Up" in self._driver.title
@@ -96,6 +103,22 @@ class Facebook:
     def open_fanpage(self, url):
         print('Facebook open_fanpage')
         self._driver.get(url)
+
+        try:
+            # text_to_be_present_in_element
+
+            box = self._driver.wait.until(EC.presence_of_element_located(
+                (By.XPATH, "//*[@id='mainContainer']/div/div[2]/div[2]/div/div/div/div/div[2]/div/div[3]/div[2]/div/div/div[2]/div/div[3]/div[2]/p")))
+            # button = self._driver.wait.until(EC.element_to_be_clickable(
+            #     (By.NAME, "btnK")))
+            # box.send_keys(query)
+            # button.click()
+        except TimeoutException:
+            print("Nenhum post encontrado na página")
+
+        print('Iniciando contagem...')
+        self._driver.implicitly_wait(5)
+        print('Fim da contagem.')
         return self._driver
 
     def close(self):

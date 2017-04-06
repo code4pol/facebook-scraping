@@ -1,12 +1,12 @@
 from .context import Facebook
 from .helpers import get_credentials
+import time
 
 import unittest
 
 
 class TestFacebookLogin(unittest.TestCase):
 
-    @classmethod
     def setUp(self):
         print('TestFacebookLogin.setUp')
         self.user, self.password = get_credentials()
@@ -28,7 +28,6 @@ class TestFacebookLogin(unittest.TestCase):
 
 class TestFacebook(unittest.TestCase):
 
-    @classmethod
     def setUp(self):
         print('TestFacebook.setUp')
 
@@ -48,8 +47,26 @@ class TestFacebook(unittest.TestCase):
         self.assertEquals('@jdoriajr', pagename)
 
     def test_posts(self):
-        # //*[@id="u_0_t"]/div[2]/div[1]
-        pass
+        print('TestFacebook.test_posts')
+
+        # page_url = 'https://www.facebook.com/jdoriajr'
+        page_url = 'https://www.facebook.com/Budegas-Bistr%C3%B4-Na-hora-sai-191059734334020/'
+
+        fanpage = self.facebook.open_fanpage(page_url)
+
+        time.sleep(5)
+
+        # Doria
+        # xpath = "//*[@id='mainContainer']/div/div[2]/div[2]/div/div/div/div/div[2]/div/div[3]/div[2]/div/div/div[2]/div/div[3]/div[2]/p"
+
+        # Budega
+        xpath = "//*[@id='mainContainer']/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div/div[8]/div[2]/div/div/div/div/div[3]/div[2]/p"
+
+        post = fanpage.find_element_by_xpath(xpath).get_attribute("innerText")
+
+        print('POST=',post)
+        self.assertRegex(post, 'Galera, esse candango.*')
+
 
 if __name__ == '__main__':
     unittest.main()
