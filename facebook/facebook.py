@@ -1,35 +1,56 @@
 from selenium import webdriver
 # from selenium.webdriver.common.keys import Keys
 
-class FacebookLoginPage:
+class Facebook:
 
-    _login_url = "https://www.facebook.com/"
-    _page_url = "https://www.facebook.com/jdoriajr/"
+    instance = None
 
     def __init__(self):
-        self._driver = webdriver.Chrome('/Users/alegomes/code/facebook-scraping/drivers/chromedriver')
-        # self._driver = webdriver.Firefox()
-        self._driver.get(self._login_url)
-        assert "Facebook - Log In or Sign Up" in self._driver.title
-        self._email_field = self._driver.find_element_by_id('email')
-        self._pass_field = self._driver.find_element_by_id('pass')
-        self._login_button = self._driver.find_element_by_id('u_0_p')
+        if not Facebook.instance:
+            Facebook.instance = Facebook.__FacebookLoginPage()
+
+    # Delegator
+    def __getattr__(self, name):
+        return getattr(self.instance, name)
 
     def __del__(self):
-        self._driver.quit()
+        self.instance._driver.close()
+        self.instance._driver.quit()
+        print('FacebookLoginPage destroyed')
 
-    def login(self,user,password):
-        self._email_field.send_keys(user)
-        self._pass_field.send_keys(password)
-        # self._login_button.click()
-        self._pass_field.submit()
+    # Singleton
+    # http://python-3-patterns-idioms-test.readthedocs.io/en/latest/Singleton.html
+    class __FacebookLoginPage:
 
-    def get_login_field(self):
-        return None
+        _login_url = "https://www.facebook.com/"
+        logged = False
+
+        def __init__(self):
+            self._driver = webdriver.Chrome('/Users/alegomes/code/facebook-scraping/drivers/chromedriver')
+            # self._driver = webdriver.Firefox(executable_path='/Users/alegomes/code/facebook-scraping/drivers/geckodriver')
+            self._driver.get(self._login_url)
+            assert "Facebook - Log In or Sign Up" in self._driver.title
+            self._email_field = self._driver.find_element_by_id('email')
+            self._pass_field = self._driver.find_element_by_id('pass')
+            self._login_button = self._driver.find_element_by_id('u_0_p')
+
+        def __del__(self):
+            self._driver.close()
+            self._driver.quit()
+            print('__FacebookLoginPage destroyed')
+
+        def login(self, user, password):
+            if not self.logged:
+                self._email_field.send_keys(user)
+                self._pass_field.send_keys(password)
+                # self._login_button.click()
+                self._pass_field.submit()
+                self.logged = True
+
 
 class FacebookFanPage:
 
-    def __init__(self):
+    def __init__(self,login):
         pass
 
 

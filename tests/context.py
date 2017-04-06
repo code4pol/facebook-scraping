@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath('..'))
 
-from facebook.facebook import FacebookLoginPage
+from facebook.facebook import Facebook, FacebookFanPage
 
 
 
