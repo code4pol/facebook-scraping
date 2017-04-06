@@ -5,9 +5,9 @@ class Facebook:
 
     instance = None
 
-    def __init__(self):
+    def __init__(self, username, password):
         if not Facebook.instance:
-            Facebook.instance = Facebook.__FacebookLoginPage()
+            Facebook.instance = Facebook.__FacebookLoginPage(username, password)
 
     # Delegator
     def __getattr__(self, name):
@@ -25,7 +25,7 @@ class Facebook:
         _login_url = "https://www.facebook.com/"
         logged = False
 
-        def __init__(self):
+        def __init__(self, username, password):
             self._driver = webdriver.Chrome('/Users/alegomes/code/facebook-scraping/drivers/chromedriver')
             # self._driver = webdriver.Firefox(executable_path='/Users/alegomes/code/facebook-scraping/drivers/geckodriver')
             self._driver.get(self._login_url)
@@ -34,12 +34,14 @@ class Facebook:
             self._pass_field = self._driver.find_element_by_id('pass')
             self._login_button = self._driver.find_element_by_id('u_0_p')
 
+            self._login(username,password)
+
         def __del__(self):
             self._driver.close()
             self._driver.quit()
             print('__FacebookLoginPage destroyed')
 
-        def login(self, user, password):
+        def _login(self, user, password):
             if not self.logged:
                 self._email_field.send_keys(user)
                 self._pass_field.send_keys(password)
@@ -48,11 +50,9 @@ class Facebook:
                 self.logged = True
 
 
-class FacebookFanPage:
-
-    def __init__(self,login):
-        pass
-
+        def open_fanpage(self, url):
+            self._driver.get(url)
+            return self._driver
 
 # import requests
 
