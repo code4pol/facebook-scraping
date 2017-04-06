@@ -1,1 +1,6 @@
 credentials.txt
+.DS_Store
+.idea/workspace.xml
+drivers/.DS_Store
+**/__pycache__/
+tests/geckodriver.log
